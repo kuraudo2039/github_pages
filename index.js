@@ -25,7 +25,6 @@ window.addEventListener('DOMContentLoaded', function(){
 
   document.getElementById("generateBingo").addEventListener("click", (event) => {
     let numbers = new Array(75).fill().map((item, index) => index+1);
-    console.log(numbers);
     let tables = new Array(5);
     for(let i = 0; i < 5; i++){
       tables[i] = new Array(5);
@@ -48,12 +47,9 @@ window.addEventListener('DOMContentLoaded', function(){
       }
       bingoHtml+=`<tr class="bingo_row">${rowHtml}</tr>`
       rowHtml = '';
-      console.log(bingoHtml);
     }
 
     document.getElementById("targetBingo").innerHTML=bingoHtml;
-
-    console.log(tables);
 
     generateBingoImage();
   })
