@@ -13,13 +13,15 @@ window.addEventListener('DOMContentLoaded', function(){
   });
 
   //ボタンを押下した際にダウンロードする画像を作る
-  html2canvas(document.getElementById("target"),{
-    onrendered: function(canvas){
-      //aタグのhrefにキャプチャ画像のURLを設定
-      var imgData = canvas.toDataURL();
-      document.getElementById("ss").href = imgData;
-    }
-  });
+  const generateBingoImage = () => {
+    html2canvas(document.getElementById("target"),{
+      onrendered: function(canvas){
+        //aタグのhrefにキャプチャ画像のURLを設定
+        var imgData = canvas.toDataURL();
+        document.getElementById("ss").href = imgData;
+      }
+    });
+  }
 
   document.getElementById("generateBingo").addEventListener("click", (event) => {
     let numbers = new Array(75).fill().map((item, index) => index+1);
@@ -52,5 +54,7 @@ window.addEventListener('DOMContentLoaded', function(){
     document.getElementById("targetBingo").innerHTML=bingoHtml;
 
     console.log(tables);
+
+    generateBingoImage();
   })
 });
