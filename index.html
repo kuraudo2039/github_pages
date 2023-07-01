@@ -50,6 +50,8 @@
         </div>
     </div>
 
+    <p>チェックも簡単にできます。→ <a href="check.html">ビンゴ大会チェック用サイト</a><br>※簡素なつくりなので、リロードしたら消えます。</p>
+
     <div class="bingo_wrapper" id="target">
       <img class="bingo_base_img" src="mutsukimemori_bingo.png" alt="無月めもりビンゴ元データ">
       <table class="bingo" id="targetBingo">
@@ -91,31 +93,10 @@
       </table>
     </div>
 
-    <div class="d-none">
-      <br>
-      <hr>
-      <h3>↓↓ここから画像↓↓　（上の対象のDIVを画像化）<h3>
-      <img src="" id="result" />
-      <h3>↑↑ここまで画像↑↑</h3>
-
-      <hr>
-
-
-      <hr>
-      <h3>注意</h3>
-      <ul>
-        <li>実際にはスクリーンショットを撮っているわけではない</li>
-        <li>html2canvasは、HTML内のDOMやCSSを解釈してCanvas上に描画するライブラリ</li>
-        <li>つまり、レンダリングエンジンに近い動作をする</li>
-        <li>そのため、ブラウザと異なる表示がされる場合がある</li>
-        <li>flashやapplet,iframe（別URL）はうまくキャプチャできない</li>
-      </ul>
-      </div>
-    </div>
   </div>
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+  <script src="html2canvas.js"></script>
   <script src="index.js"></script>
 
 </body>
